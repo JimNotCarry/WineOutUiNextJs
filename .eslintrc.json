@@ -8,6 +8,6 @@
     "linebreak-style": [
       "error",
       "CLRF"
-    ],
+    ]
   }
 }
