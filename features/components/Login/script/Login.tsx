@@ -3,7 +3,9 @@ import React from 'react';
 export const LoginComp = () => {
   return (
     <>
-      <h1>Hi from login-comp</h1>
+      <div className="header-text">
+        <h1>Hi from login-comp</h1>
+      </div>
     </>
   );
 };
