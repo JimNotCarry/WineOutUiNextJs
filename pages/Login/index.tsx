@@ -1,12 +1,12 @@
 import React from 'react';
-import { LoginComp } from '@/components/Login/script/Login';
+import Login from '@/components/Login/script/_index';
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <>
-      <LoginComp />
+      <Login />
     </>
   );
 };
 
-export default Login;
+export default LoginPage;
