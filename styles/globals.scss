@@ -1,4 +1,22 @@
 
 body {
   background-color: #FFF7ED;
+  height: 100%;
 }
+
+@media screen and (max-width: 450px) {
+
+.container {
+  border: 2px solid black;
+  min-height: 81vh;
+}
+
+}
+
+@media screen and (min-width: 456px) {
+
+  .container {
+    display: none;
+  }
+  
+  }
