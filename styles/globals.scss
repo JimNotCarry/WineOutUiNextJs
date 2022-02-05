@@ -1,0 +1,68 @@
+@import 'bootstrap/scss/bootstrap.scss';
+
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+@font-face {
+  font-family: 'SyneMono-Regular';
+  src: url('./../public/fonts/SyneMono-Regular.ttf');
+}
+
+body {
+  background: $body-color;
+
+  * {
+  font-family: 'SyneMono-Regular';
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .container {
+
+    &.fill {
+      height: 100vh;
+      padding: 5%;
+    }
+
+    .frame {
+      width: 100%;
+      height: 100%;
+      border: 3px solid black;
+      border-radius: 2px;
+    }
+  }
+
+  .base-background {
+    @include flex-width-center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5%;
+
+    .square {
+      @include flex-width-center;
+      margin-top: 2%;
+      width: 10%;
+      height: 100%;
+      background-color: $body-color;
+
+      
+    .grape {
+      width: 85%;
+    }
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 456px) {
+
+  .container {
+    display: none;
+  }
+  
+  }
