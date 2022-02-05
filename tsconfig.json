@@ -22,14 +22,17 @@
     "paths": {
       "@/components/*": ["features/components/*"],
       "@/styles/*": ["styles/*"],
-      "@/public/*": ["public/*"]
+      "@/public/*": ["public/*"],
+      "@/redux/*": ["redux-wineout/*"],
+      "@/scripts/*": ["features/scripts/*"],
+      "@/graph/*": ["graph/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "graph/queries.tss"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-//import { State } from '../../../ProjRedux';
-//import { useSelector, useDispatch } from 'react-redux';
-//import { UserData } from '../../../Reducer/User/initialState';
-//import { userCreators } from '../../../Reducer';
-//import { bindActionCreators } from 'redux';
-//import { CheckAuth } from '../../../ui/Script/recieveData';
+import { useRouter } from 'next/router';
+import { State } from '@/redux/index';
+import { useSelector, useDispatch } from 'react-redux';
+import { UserData } from '@/redux/User/initialState';
+import { userCreators } from '@/redux/creators/index';
+import { bindActionCreators } from 'redux';
+import { CheckAuth } from '@/scripts/check-response';
 import winebottle from '@/public/images/winebottle.png';
 import book from '@/public/images/book.png';
 import gear from '@/public/images/gear.png';
@@ -14,32 +15,34 @@ import gear from '@/public/images/gear.png';
 // import gear from './../../../Static/Images/gear.png';
 
 const MyPageMainComp = () => {
-  //   const dispatch = useDispatch();
+  const router = useRouter();
 
-  //   const { GetUserDataByUsername } = bindActionCreators(userCreators, dispatch);
+  const dispatch = useDispatch();
 
-  //   const userdata: UserData = useSelector((state: State) => state.user);
+  const { GetUserDataByUsername } = bindActionCreators(userCreators, dispatch);
 
-  //   useEffect(() => {
-  //     const auth = async () => {
-  //       const status = await CheckAuth();
+  const userdata: UserData = useSelector((state: State) => state.user);
 
-  //       if (status === 200) {
-  //         GetUserDataByUsername();
-  //       }
-  //     };
+  useEffect(() => {
+    const auth = async () => {
+      const status = await CheckAuth();
 
-  //     auth();
-  //   }, []);
+      if (status === 200) {
+        GetUserDataByUsername();
+      }
+    };
+
+    auth();
+  }, []);
 
   return (
     <div className="container mypage">
       <div className="row mypage">
         <div className="row">
-          <p className="greeting">Good evening, Linus.</p>
+          <p className="greeting">Good evening, {userdata.firstname}.</p>
         </div>
         <div className="row bottle-icon">
-          <div className="winebottle">
+          <div className="winebottle" onClick={() => router.push('/diary')}>
             <Image src={winebottle} alt="winebottle" />
           </div>
           <div className="row icon-text">

@@ -7,6 +7,7 @@ import Notes from '@/components/diary/notes';
 import Cross from '@/public/images/cross.png';
 import Social from '@/public/images/social.png';
 import Confirm from '@/public/images/confirm.png';
+import { test, getUserinfo } from '@/graph/query';
 
 export const Diary = () => {
   const LogMessage = (e: any) => {
@@ -25,6 +26,8 @@ export const Diary = () => {
 
     console.log(data);
   };
+
+  () => test();
 
   // const LogRange = (e : any) => {
   //     console.log(e.target.value);
