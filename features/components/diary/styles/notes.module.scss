@@ -15,6 +15,7 @@ input[type=range] {
         transition: opacity .2s;
 
         &::-webkit-slider-thumb {
+            z-index: -1;
             -webkit-appearance: none; /* Override default look */
             appearance: none;
             width: 10px; /* Set a specific slider handle width */

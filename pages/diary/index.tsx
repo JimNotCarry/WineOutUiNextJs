@@ -1,8 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 
 import Base from '@/components/diary';
 import UploadImage from '@/components/upload-image/index';
 import Notes from '@/components/diary/notes';
+import Cross from '@/public/images/cross.png';
+import Social from '@/public/images/social.png';
+import Confirm from '@/public/images/confirm.png';
 
 export const Diary = () => {
   const LogMessage = (e: any) => {
@@ -48,3 +52,21 @@ export const Diary = () => {
 };
 
 export default Diary;
+
+// <div className="row button-container">
+// <div className="cancel-button col-4">
+//   <div className="cancel-icon">
+//     <Image src={Cross} alt="cancel-button" />
+//   </div>
+// </div>
+// <div className="social-button col-4">
+//   <div className="social-icon">
+//     {/* <Image src={Social} alt="social-button" /> */}
+//     <h1>Hej</h1>
+//   </div>
+// </div>
+// <div className="confirm-icon col-4">
+//   {/* <Image src={Confirm} alt="confirm-button" /> */}
+//   <h1>Hej</h1>
+// </div>
+// </div>
