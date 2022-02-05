@@ -1,5 +1,5 @@
 import React from 'react';
-import MyPageMainComp from '@/components/mypage/_index';
+import MyPageMainComp from '@/components/mypage/index';
 
 const MyPage = () => {
   return (
