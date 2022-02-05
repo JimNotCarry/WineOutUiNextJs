@@ -34,7 +34,7 @@
 
 @mixin login-fields-config {
     @include font-size-login-section;
-    width: 62%;
+    width: 100%;
     height: 6vh;
     margin-top: 3%;
     border: 0;
