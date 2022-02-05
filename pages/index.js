@@ -9,10 +9,10 @@ export default function App() {
         <div className="square">
           <div className="grape">
             <Image src={grape} alt="winebottle" />
+            <Login />
           </div>
         </div>
       </div>
-      <Login />
     </div>
   );
 }

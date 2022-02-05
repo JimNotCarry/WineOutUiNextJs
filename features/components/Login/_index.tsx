@@ -1,9 +1,12 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import winebottle from '@/public/images/winebottle.png';
 
 const Login = () => {
+  const router = useRouter();
+
   const logIn = (e: any) => {
     e.preventDefault();
 
@@ -19,6 +22,7 @@ const Login = () => {
       .post('http://localhost:8080/login', params, { withCredentials: true })
       .then(res => {
         if (res.status === 200) {
+          router.push('/mypage');
         } else if (res.status !== 200) {
           console.log('Error');
         }
