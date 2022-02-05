@@ -5,7 +5,8 @@
     .container {
 
         &.login {
-            @include padding-page-content;
+            //@include padding-page-content;
+            padding-top: 20%;
         }
 
         .row {
