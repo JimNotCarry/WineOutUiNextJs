@@ -22,7 +22,7 @@
     "paths": {
       "@/components/*": ["features/components/*"],
       "@/styles/*": ["styles/*"],
-      "@/images/*": ["public/images/*"]
+      "@/public/*": ["public/*"]
     }
   },
   "include": [

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import winebottle from '@/images/winebottle.png';
+import winebottle from '@/public/images/winebottle.png';
 
 const Login = () => {
   const logIn = (e: any) => {
@@ -32,12 +32,12 @@ const Login = () => {
           <p className="header-text">wine'out</p>
           <div className="image-section">
             <div className="winebottle">
-              <Image src={winebottle} />
+              <Image src={winebottle} alt="winebottle" />
             </div>
           </div>
         </div>
         <div className="bottom-content">
-          <h5>Login</h5>
+          <h3>Login</h3>
           <form onSubmit={e => logIn(e)}>
             <input name="username" type="text" placeholder="Username"></input>
             <br />
