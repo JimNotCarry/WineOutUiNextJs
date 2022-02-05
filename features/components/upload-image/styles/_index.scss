@@ -1,0 +1,62 @@
+.wine-image {
+    background-color: #F9EEE1;
+    height: 40vh;
+    padding: 2%;
+    margin-top: 8%;
+
+    .image-preview {
+        width: 100%;
+        height: 100%;
+        background-color: #faf1e7;
+
+        &.hide {
+            display: none;
+        }
+
+        .image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .image-uploader {
+        width: 100%;
+        height: 100%;;
+        background-color: #faf1e7;
+
+        &.hide {
+            display: none;
+        }
+
+        input[type=file] {
+            display: none;
+        }
+
+        .file-icon {
+            width: 40%;
+        }
+    }
+
+    .image-enlarged {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #fff8ea, $alpha: 0.9);
+        top: 0;
+        left: 0;
+
+
+        &.hide {
+            display: none;
+        }
+
+        .image {
+            object-fit: cover;
+            margin-top: 10%;
+            padding: 10%;
+            width: 100%;
+            height: 90%;
+        }
+    }
+}

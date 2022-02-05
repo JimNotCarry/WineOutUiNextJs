@@ -1,6 +1,8 @@
 import React from 'react';
 
-import Base from '@/components/diary/base';
+import Base from '@/components/diary';
+import UploadImage from '@/components/upload-image/index';
+import Notes from '@/components/diary/notes';
 
 export const Diary = () => {
   const LogMessage = (e: any) => {
@@ -25,12 +27,23 @@ export const Diary = () => {
   // };
 
   return (
-    <div className="container diary-default">
-      <form onSubmit={e => LogMessage(e)}>
-        <Base />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <>
+      <div className="container diary-default">
+        <form onSubmit={e => LogMessage(e)}>
+          <Base />
+          <div className="container diary-image-notes">
+            <div className="row image-notes">
+              <div className="wine-image col-6">
+                <UploadImage />
+              </div>
+              <div className="note-section col-6">
+                <Notes />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 
