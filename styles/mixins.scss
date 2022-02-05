@@ -9,6 +9,11 @@
     justify-content: center;
 }
 
+@mixin content-text-center {
+    justify-content: center;
+    text-align: center;
+}
+
 @mixin padding-page-content {
     padding: 10%;
     padding-top: 20%;

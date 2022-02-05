@@ -39,7 +39,9 @@ const MyPageMainComp = () => {
           <p className="greeting">Good evening, Linus.</p>
         </div>
         <div className="row bottle-icon">
-          <Image src={winebottle} alt="winebottle" />
+          <div className="winebottle">
+            <Image src={winebottle} alt="winebottle" />
+          </div>
           <div className="row icon-text">
             <div className="text-frame bottle">
               <p>New Post</p>
@@ -47,7 +49,9 @@ const MyPageMainComp = () => {
           </div>
         </div>
         <div className="row book-icon">
-          <Image src={book} alt="winebottle" />
+          <div className="book">
+            <Image src={book} alt="winebottle" />
+          </div>
           <div className="row icon-text">
             <div className="text-frame book">
               <p>Posts</p>
@@ -55,7 +59,9 @@ const MyPageMainComp = () => {
           </div>
         </div>
         <div className="row gear-icon">
-          <Image src={gear} alt="winebottle" />
+          <div className="gear">
+            <Image src={gear} alt="winebottle" />
+          </div>
           <div className="row icon-text">
             <div className="text-frame settings">
               <p>Settings</p>

@@ -5,14 +5,13 @@
     .container {
 
         &.login {
-            @include padding-page-content
-        };
+            @include padding-page-content;
+        }
 
         .row {
 
             &.login {
-                justify-content: center;
-                text-align: center;
+                @include content-text-center;
             }
         }
 
@@ -24,8 +23,7 @@
             }
 
             .image-section {
-                display: flex;
-                justify-content: center;
+                @include flex-width-center;
                 width: 100%;
 
                 .winebottle {
@@ -37,7 +35,7 @@
 
         .bottom-content {
             height: 70%;
-            padding-top: 10%;
+            padding-top: 0%;
 
             h3 {
                 margin: 0%;

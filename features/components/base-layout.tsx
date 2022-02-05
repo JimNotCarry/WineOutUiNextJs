@@ -5,15 +5,17 @@ import grape from '@/public/images/grape.png';
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="container">
+      <div className="container fill">
         <div className="base-background">
           <div className="square">
             <div className="grape">
-              <Image src={grape} alt="winebottle" />
+              <Image src={grape} alt="grape" />
             </div>
           </div>
         </div>
-        <main>{children}</main>
+        <div className="frame">
+          <main>{children}</main>
+        </div>
       </div>
     </>
   );

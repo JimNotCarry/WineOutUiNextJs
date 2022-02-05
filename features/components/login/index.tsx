@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 import winebottle from '@/public/images/winebottle.png';
 
