@@ -1,5 +1,5 @@
 import '../styles/globals.scss';
-import '@/components/Login/styles/_index.scss';
+import '@/components/login/styles/_index.scss';
 import '@/components/mypage/styles/_index.scss';
 import Layout from '@/components/base-layout.tsx';
 
