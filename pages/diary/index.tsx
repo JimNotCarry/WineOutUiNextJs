@@ -14,7 +14,7 @@ export const Diary = () => {
       percentage: e.target.percentage.value,
       district: e.target.district.value,
       grape: e.target.grape.value,
-      image: e.target.image.value,
+      //image: e.target.image.value,
     };
 
     console.log(data);
@@ -28,6 +28,7 @@ export const Diary = () => {
     <div className="container diary-default">
       <form onSubmit={e => LogMessage(e)}>
         <Base />
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
