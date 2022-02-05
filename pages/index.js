@@ -1,4 +1,4 @@
-import Login from './Login/index';
+import Login from './login/index';
 
 export default function App() {
   return (
