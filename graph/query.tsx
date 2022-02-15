@@ -1,7 +1,7 @@
 export const getSettings = () => {
   return `
     {
-        user(username: "USERNAMEVALUE") {
+        user(username: "DEFAULTUSERNAMEVALUE") {
             diarySettings {
                 rating,
                 tannins,
@@ -18,29 +18,18 @@ export const test = () => {
   return 'Hej';
 };
 
-export const getUserinfo = () => {
-  return `
-        {
-            user(username: "USERNAMEVALUE") {
-                username,
+export const getUserinfo = (): any => {
+  return `{
+            UserData: GetUser(username: "DEFAULTUSERNAMEVALUE") {
                 firstname,
-                lastname,
-                diarySettings {
-                    rating,
-                    tannins,
-                    acidity,
-                    body,
-                    comments
-                }
             }
-        }
-        `;
+        }`;
 };
 
 export const getUsername = () => {
   return `
         {
-            user(username: "USERNAMEVALUE") {
+            user(username: "DEFAULTUSERNAMEVALUE") {
                 username,
             }
         }

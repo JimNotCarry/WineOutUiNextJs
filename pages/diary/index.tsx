@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 
 import Base from '@/components/diary';
@@ -7,9 +7,33 @@ import Notes from '@/components/diary/notes';
 import Cross from '@/public/images/cross.png';
 import Social from '@/public/images/social.png';
 import Confirm from '@/public/images/confirm.png';
+import { CheckAuth } from '@/scripts/check-response';
+import { useRouter } from 'next/router';
 import { test, getUserinfo } from '@/graph/query';
 
 export const Diary = () => {
+  const router = useRouter();
+
+  let trigger = false;
+
+  // useEffect(() => {
+  //   trigger = false;
+
+  //   const auth = async () => {
+  //     const status: any = await CheckAuth();
+
+  //     if (status != 200) {
+  //       router.push('login');
+  //     }
+  //   };
+
+  //   auth();
+
+  //   setTimeout(() => {
+  //     trigger = true;
+  //   }, 28000);
+  // }, [trigger]);
+
   const LogMessage = (e: any) => {
     e.preventDefault();
 

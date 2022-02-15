@@ -60,6 +60,7 @@
                 }
 
                 &.bottle {
+                    width: 45%;
                     transform: rotate(2.3deg);
 
                     p {
@@ -77,6 +78,7 @@
 
                 &.settings {
                     transform: rotate(2deg);
+                    width: 45%;
 
                     p {
                         transform: rotate(1.5deg);

@@ -11,9 +11,6 @@ import winebottle from '@/public/images/winebottle.png';
 import book from '@/public/images/book.png';
 import gear from '@/public/images/gear.png';
 
-// import book from './../../../Static/Images/book.png';
-// import gear from './../../../Static/Images/gear.png';
-
 const MyPageMainComp = () => {
   const router = useRouter();
 
@@ -25,10 +22,12 @@ const MyPageMainComp = () => {
 
   useEffect(() => {
     const auth = async () => {
-      const status = await CheckAuth();
+      const status: any = await CheckAuth();
 
       if (status === 200) {
         GetUserDataByUsername();
+      } else {
+        router.push('login');
       }
     };
 

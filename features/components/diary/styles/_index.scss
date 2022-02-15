@@ -5,7 +5,21 @@
 
     &.diary-default {
         padding: 6% 6% 0 6%;
+        
+    input {
+        border: 0;
+        border-radius: 2px;
+        background-color: #F9EEE1;
+        height: 4vh;
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 1%;
 
+        &.day, &.month, &.year {
+            padding: 0;
+            background-color: transparent;
+        }
+    }
     }
 
     &.diary-image-notes {
@@ -20,16 +34,6 @@
         &.image-notes {
             justify-content: center;
         }
-    }
-
-    input {
-        border: 0;
-        border-radius: 2px;
-        background-color: #F9EEE1;
-        height: 4vh;
-        text-align: center;
-        font-size: 16px;
-        margin-bottom: 1%;
     }
 
     label {
