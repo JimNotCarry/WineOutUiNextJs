@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import { UserReducer } from '@/redux/User/reducer';
+import User from '@/redux/User/reducer';
+import Diary from './diary/reducer';
+import Friend from './friends/reducer';
 
 const reducers = combineReducers({
-  user: UserReducer,
+  user: User,
+  wine: Diary,
+  friend: Friend,
 });
 
 export default reducers;

@@ -1,0 +1,167 @@
+@import '@/styles/mixins.scss';
+@import '@/styles/variables.scss';
+
+.container {
+
+    &.mypage {
+        height: 100vh;
+
+        .login-content {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .greeting {
+            height: 20vh;
+            padding-top: 8vh;
+        }
+
+        .new-post {
+            margin-bottom: 1vh;
+        }
+
+        .wine-icon, .book-icon, .gear-icon {
+            position: relative;;
+            height: 19vh;
+        }
+
+        .icon-label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6vh;
+
+
+            p {
+                margin: 0;
+                background-color: black;
+                color: white;
+                padding: 1vw 2vh 1vw 2vh;
+            }
+        }
+
+        .wine-icon {
+
+                .wine-bottle {
+                    object-fit: contain;
+                }
+        }
+
+        .posts {
+            padding: 0 6rem 0 6rem;
+
+
+        .book-icon {
+
+            .book {
+                object-fit: contain;
+            }
+        }
+        }
+
+        
+        .settings {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+
+
+        .gear-icon {
+            display: flex;
+            justify-content: center;
+
+            .gear {
+                object-fit: contain;
+            }
+
+            
+        }
+        }
+    }
+}
+
+//      &.mypage {
+//         height: 100vh;
+//      }
+
+//      .row {
+        
+//         &.mypage {
+//             justify-content: center;
+//             align-content: center;
+//             text-align: center;
+//             flex-direction: column;
+//             width: 100%;
+//             animation: fadein 0.8s;
+//         }
+    
+//         .greeting {
+//             font-size: 1.2rem;
+//             text-align: center;
+//             margin: 0;
+//             padding-top: 12vh;
+
+//             animation: fadein 2s; 
+//         }
+
+//         .winebottle {
+//             width: 14vw;
+//             height: 17vh;
+//         }
+
+//         .book {
+//             width: 7rem;
+//             height: 12vh;
+//         }
+
+        
+//         .gear {
+//             width: 7rem;
+//         }
+        
+
+//         .icon-text {
+//             padding-top: 2%;
+//             justify-content: center;
+
+//             .text-frame {
+//                 background-color: black;
+//                 border-radius: 2px;
+//                 color: white;
+//                 width: $frame-width;
+//                 height: $frame-height;
+
+//                 p {
+//                     font-size: $frame-font-size;
+//                 }
+
+//                 &.bottle {
+//                     width: 45%;
+//                     transform: rotate(2.3deg);
+
+//                     p {
+//                         transform: rotate(1deg);
+//                     }
+//                 }
+
+//                 &.book {
+//                     transform: rotate(-1.68deg);
+
+//                     p {
+//                         transform: rotate(1deg);
+//                     }
+//                 }
+
+//                 &.settings {
+//                     transform: rotate(2deg);
+//                     width: 45%;
+
+//                     p {
+//                         transform: rotate(1.5deg);
+//                     }
+//                 }
+//             }
+//         }
+//      }
+// }

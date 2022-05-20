@@ -32,7 +32,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "graph/queries.tss"  ],
+, "graph/queries.tss", "graph/query.tsx"  ],
   "exclude": [
     "node_modules"
   ]

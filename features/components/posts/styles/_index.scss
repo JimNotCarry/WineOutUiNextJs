@@ -1,0 +1,44 @@
+.container {
+    &.posts {
+        height: 100vh;
+
+        h1 {
+            text-align: center;
+            padding-top: 8vh;
+          }
+
+        .results-scroll-list {
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
+            height: 85vh;
+            overflow-y: auto;
+            a {
+                display: block;
+                font-size: 3rem;
+            }
+        }
+
+        .post-teaser {
+            height: 52vh;
+            width: 100%;
+            //border: 1px solid rgb(129, 129, 129);
+            margin-bottom: 2vh;
+
+            .background {
+                position: relative;
+
+                .image {
+                    position: absolute;
+                    z-index: -1;
+                }
+            }
+
+            .header {
+                text-align: center;
+                color: rgba(100,200,300,1.0);
+            }
+        }
+
+
+    }
+}

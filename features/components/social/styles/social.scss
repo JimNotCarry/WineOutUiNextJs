@@ -1,0 +1,46 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.social-container {
+    height: 100vh;
+    padding: 1rem;
+    position: relative;
+
+    label {
+        font-size: 1.2rem;
+    }
+
+    input, textarea {
+        display: block;
+        width: 100%;
+        @include diary-input;
+        resize: none;
+    }
+
+    .top-social {
+        height: 30%;
+    }
+
+    .bottom-social {
+        height: 63.5%;
+
+        .icon-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .images-section {
+
+            .top, .bottom {
+                justify-content: space-evenly;
+                height: 20vh;
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+            }
+
+            .image-upload {
+                background-color: red;
+            }
+        }
+    }
+}

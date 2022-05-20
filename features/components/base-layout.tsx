@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import grape from '@/public/images/grape.png';
+import Footer from '@/components/diary/footer/diary-footer';
 
 const Layout = ({ children }) => {
   return (

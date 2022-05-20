@@ -1,4 +1,7 @@
+import { AsyncThunk, AsyncThunkAction } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { Action } from 'redux';
 
 export const CheckAuth = async () => {
   const status = await axios

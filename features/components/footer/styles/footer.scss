@@ -1,0 +1,162 @@
+@import '@/styles/variables.scss';
+ 
+    .footer {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+
+    .social-background {
+        display: flex;
+        justify-content: center;
+        padding: 3%;
+        z-index: 1;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        //max-width: 6rem;
+        //max-height: 6rem;
+        box-shadow: 0px 4px 8px 0.5px rgb(160, 160, 160);
+        background-color: $body-color;
+        border: 1px solid black;
+
+            .social-icon {
+                display: flex;
+                align-items: center;
+                border: none;
+                transition: 0.2s;
+                background: none;
+
+                &.active {
+                    transform: rotate(90deg);
+                }
+            }
+    }
+
+    .test-transition {
+        position: absolute;
+        transition: 2s;
+        right: 10rem;
+
+
+        &.active {
+            transition: 2s;
+            background-color: green;
+            right: 20rem;
+        }
+    }
+
+    .menu-buttons {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+            
+        .menu-item {
+            position: relative;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 100%;
+            background-color: $body-color;
+            border: 1px solid black;
+            font-size: 0.8rem;
+            box-shadow: 0px 4px 8px 0.5px rgb(139, 139, 139);
+
+            &.num1 {
+                left: 3.5rem;
+                bottom: 0rem;
+                transition: 0.2s;
+
+                .cross-icon {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.8em;
+                }
+
+                &.active {
+                    bottom: 2rem;
+                    left: -1rem;
+                }
+            }
+
+            &.num2 {
+                bottom: 0rem;
+                transition: 0.2s;
+
+                .social-icon {
+                    position: relative;
+                    padding: 0.3rem;
+                }
+
+                &.active {
+                    bottom: 4rem;
+                }
+            }
+
+            &.num3 {
+                bottom: 0rem;               
+                right: 3.5rem;
+
+                transition: 0.2s;
+
+                &.active {
+                    bottom: 2rem;
+                    right: 0rem;
+                    right: -1rem;
+                }
+            }
+        }
+
+
+
+    }
+
+    .cancel-quarter-background {
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem 1.5rem 0.4rem 0.4rem;
+        width: 16vw;
+        height: 100%;
+        background-color: $body-color;
+        //margin-top: 6.1%;
+        margin-left: -0.5vw;
+        border-radius: 0 100% 0 0;
+        z-index: 1;
+        border: 1px solid black;
+
+    }
+
+    .submit-quarter-background {
+        width: 16vw;
+        height: 100%;
+        background-color: $body-color;
+        //margin-top: 6.1%;
+        border-radius: 100% 0 0 0;
+        z-index: -1;
+        border: 1px solid black;
+    }
+
+    }
+
+@media screen and (min-height: 800px) {
+
+    .footer {
+        .social-background {
+            width: 5em;
+            height: 5em;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 319px) and (max-height: 570px) {
+
+    .footer {
+        .social-background {
+            width: 3.8em;
+            height: 3.8em;
+        }
+    }
+    
+}
