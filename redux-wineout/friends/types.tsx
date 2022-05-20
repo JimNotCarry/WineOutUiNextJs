@@ -1,5 +1,6 @@
 export type FriendState = {
   FriendRequest?: FriendRequest[];
+  SendRequest?: Status;
   FriendList?: Friend[];
 };
 
@@ -11,4 +12,8 @@ export type FriendRequest = {
 
 export type Friend = {
   friend: String;
+};
+
+export type Status = {
+  status: String;
 };

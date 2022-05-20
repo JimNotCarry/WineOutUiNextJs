@@ -9,7 +9,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { getUserinfo, test, testquery } from '@/graph/query';
 
 import axios from 'axios';
-import { api, apiParams } from '../api';
+import { api, apiParams, apiParamsImages } from '../api';
 import { type } from 'os';
 
 export const getPosts = createAsyncThunk('diary/Posts', async () => {
@@ -123,8 +123,7 @@ const postData = (state: DiaryState) => {
   console.log(formated);
 
   api('POST', 'postdiary', data);
-  apiParams(
-    'POST',
+  apiParamsImages(
     'images/postImages?' +
       new URLSearchParams({
         occasiondate: formated,

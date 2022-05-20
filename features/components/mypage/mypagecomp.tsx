@@ -9,7 +9,7 @@ import { CheckAuth } from '@/scripts/check-response';
 import {
   checkFriendRequests,
   getFriends,
-  sendFriendRequest,
+  friendRequest,
 } from '@/redux/friends/reducer';
 import { useRouter } from 'next/router';
 import { friendList } from '../friends/friendlist/friendlist';
@@ -76,9 +76,7 @@ const MypageComponent = () => {
                   maxLength={6}
                 />
                 <button
-                  onClick={() =>
-                    dispatch(sendFriendRequest({ friendid: friendidrequest }))
-                  }
+                  onClick={() => dispatch(friendRequest(friendidrequest))}
                 >
                   ADD
                 </button>

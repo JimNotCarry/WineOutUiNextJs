@@ -30,16 +30,15 @@ const MainMenuComp = () => {
 
     //console.log((document.cookie = 'access_token'));
 
+    if (time > 18 || time < 5) {
+      return 'evening';
+    }
     if (time < 12) {
       return 'morning';
     }
 
     if (time > 12) {
       return 'afternoon';
-    }
-
-    if (time > 18 && time < 5) {
-      return 'evening';
     }
   };
 

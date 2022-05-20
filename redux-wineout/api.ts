@@ -25,3 +25,9 @@ export const apiParams = (
     withCredentials: true,
   });
 };
+
+export const apiParamsImages = (endpoint: string, data?: Object) => {
+  axios.post('http://localhost:8080/api/' + endpoint, data, {
+    withCredentials: true,
+  });
+};

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import bottle from '@/public/images/bottlejpg.jpg';
+import winebottle from '@/public/images/winebottle.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { State } from '@/redux/index';
 
@@ -10,8 +11,7 @@ export const Teaser = styled.section`
 
 export const TeaserBackground = styled.div`
   position: relative;
-  background-image: url(${bottle.src});
-  background-size: cover;
+  background-image: url(${winebottle.src});
   height: 100%;
   width: 100%;
   border-radius: 1rem;
