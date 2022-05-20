@@ -1,39 +1,82 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 import Base from '@/components/diary';
 import UploadImage from '@/components/upload-image/index';
 import Notes from '@/components/diary/notes';
+import Footer from '@/components/footer/menu-footer';
+import Cross from '@/public/images/cross.png';
+import Social from '@/public/images/social.png';
+import Confirm from '@/public/images/confirm.png';
+import { CheckAuth } from '@/scripts/check-response';
+import { useRouter } from 'next/router';
+import { test, getUserinfo } from '@/graph/query';
+import { useDispatch, useSelector } from 'react-redux';
+import { State } from '@/redux/index';
+import { DiaryType, DiaryState, defaultState } from '@/redux/diary/types';
+import {
+  PostDiary,
+  SetDiaryDataOnInput,
+  SetDiaryTastingnotes,
+} from '@/redux/diary/reducer';
 
 export const Diary = () => {
-  const LogMessage = (e: any) => {
-    e.preventDefault();
+  const router = useRouter();
 
-    const data = {
-      wine: e.target.wine.value,
-      vintage: e.target.vintage.value,
-      producer: e.target.producer.value,
-      region: e.target.region.value,
-      percentage: e.target.percentage.value,
-      district: e.target.district.value,
-      grape: e.target.grape.value,
-      //image: e.target.image.value,
-    };
+  const state = useSelector((state: State) => state.wine.Post);
 
-    console.log(data);
+  const change = e => {
+    let newData = null;
+
+    if (e.target.id === 'tastingNotes') {
+      newData = {
+        ...state.tastingNotes,
+        [e.target.name]: e.target.value,
+      };
+      dispatch(SetDiaryTastingnotes(newData));
+    } else {
+      newData = {
+        ...state,
+        [e.target.name]: e.target.value,
+      };
+      dispatch(SetDiaryDataOnInput(newData));
+    }
   };
 
-  // const LogRange = (e : any) => {
-  //     console.log(e.target.value);
-  // };
+  const PostData = e => {
+    e.preventDefault();
+
+    const occasionDate = new Date();
+
+    occasionDate.setDate(e.target['day'].value);
+    occasionDate.setMonth(e.target['month'].value - 1);
+    occasionDate.setFullYear(e.target['year'].value);
+
+    dispatch(PostDiary(occasionDate));
+  };
+
+  const teaser = useSelector((state: State) => state.wine.Teaser);
+
+  const dispatch = useDispatch();
+
+  const image = {
+    src: Social,
+    width: 100,
+    height: 100,
+  };
+
+  const routing = '/social';
 
   return (
     <>
-      <div className="container diary-default">
-        <form onSubmit={e => LogMessage(e)}>
-          <Base />
-          <div className="container diary-image-notes">
+      <form onSubmit={e => PostData(e)} onChange={e => change(e)}>
+        <fieldset className="diary-default" disabled={teaser.Teaser}>
+          <div className="diary-top-content">
+            <Base />
+          </div>
+          <div className="diary-bottom-content">
             <div className="row image-notes">
-              <div className="wine-image col-6">
+              <div className="col-6 no-float uploader-section">
                 <UploadImage />
               </div>
               <div className="note-section col-6">
@@ -41,8 +84,11 @@ export const Diary = () => {
               </div>
             </div>
           </div>
-        </form>
-      </div>
+          <div className="footer-section">
+            <Footer data={image} routing={routing} />
+          </div>
+        </fieldset>
+      </form>
     </>
   );
 };

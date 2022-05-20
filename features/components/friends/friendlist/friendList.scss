@@ -1,0 +1,21 @@
+.friends {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+
+    .friendList {
+
+        p {
+            display: inline;
+        
+            &#friendid {
+                color: gray;
+                font-size: 0.9rem;
+                font-style: italic;
+            }
+        }
+
+        .frienddata {
+        }
+    }
+}

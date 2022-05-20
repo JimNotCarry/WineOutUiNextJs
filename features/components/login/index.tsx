@@ -22,7 +22,7 @@ const Login = () => {
       .post('http://localhost:8080/login', params, { withCredentials: true })
       .then(res => {
         if (res.status === 200) {
-          router.push('/mypage');
+          router.push('/main');
         } else if (res.status !== 200) {
           console.log('Error');
         }

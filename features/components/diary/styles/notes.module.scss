@@ -1,26 +1,25 @@
 input[type=range] {
 
     &.slider {
+        accent-color: rgb(55, 0, 12);
 
-        margin-top: -5%;
-        -webkit-appearance: none;  /* Override default CSS styles */
-        appearance: none;
-        -webkit-appearance: none;
+        //-webkit-appearance:media-sliderthumb;  /* Override default CSS styles */
+        //appearance: none;
+        //-webkit-appearance: none;
         background-color: rgba($color: #E8D0D0, $alpha: 1.0);
-        height: 4%;
         width: 100%;
-        outline: none; /* Remove outline */
+        //outline: none; /* Remove outline */
         opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
         -webkit-transition: .2s; /* 0.2 seconds transition on hover */
         transition: opacity .2s;
 
         &::-webkit-slider-thumb {
+            z-index: -1;
             -webkit-appearance: none; /* Override default look */
             appearance: none;
-            width: 10px; /* Set a specific slider handle width */
-            height: 10px; /* Slider handle height */
-            background: #570819; /* Green background */
-            cursor: pointer; /* Cursor on hover */
+            width: 1rem; /* Set a specific slider handle width */
+            height: 1rem; /* Slider handle height */
+            background: #000000; /* Green background */
         }
         }
   }

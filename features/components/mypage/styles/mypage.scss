@@ -1,0 +1,100 @@
+.container {
+    &.mypage {
+        height: 100vh;
+    }
+
+    .mypage-content {
+        margin-top: 10vh;
+        width: 100%;
+    }
+
+    .friendid-flip, .add-flip {
+        width: 100%;
+        height: 4vh;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2vh;
+
+        .friendid-flipper, .add-flipper {
+            border: 1px black;
+            position: relative;
+            width: 80%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+
+            &.active {
+                transform: rotateX(180deg);
+            }
+        }
+
+            
+        .front-button, .back-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: 1.4px solid black;
+            border-radius: 5px;
+            backface-visibility: hidden;
+        }
+        }
+
+        .front-button {
+            position: absolute;
+            background: linear-gradient(to bottom, #ffffff 0%, #774747 250%);
+            transform: rotateX(0deg);
+            transition: transform 0.8s;
+
+            &:active {
+                transition: transform 0.8s;
+                background: linear-gradient(to bottom, #cfcebb 0%, #ffffff 200%);
+            }
+        }
+
+        .back-button {
+            background-color: rgb(93, 27, 27);
+            font-size: 1.5rem;
+            color: white;
+            transform: rotateX(180deg);
+
+            .copy-image {
+                background-color: white;
+                border-radius: 8px;
+            }
+
+            &.input {
+                width: 100%;
+                background: none;
+
+                input {
+                    border: none;
+                    height: 100%;
+                    width: 70%;
+                    text-align: center;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    background: white;
+                    font-size: 1rem;
+                    width: 20%;
+                    height: 100%;
+                    padding: 0;
+                    border: none;
+                }
+            }
+        }
+
+    .friend-request {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 10vh;
+    }
+}

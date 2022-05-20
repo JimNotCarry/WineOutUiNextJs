@@ -1,10 +1,10 @@
 import React from 'react';
-import MyPageMainComp from '@/components/mypage/index';
+import MypageComponent from '@/components/mypage/mypagecomp';
 
 const MyPage = () => {
   return (
     <>
-      <MyPageMainComp />
+      <MypageComponent />
     </>
   );
 };
